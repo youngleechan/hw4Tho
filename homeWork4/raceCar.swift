@@ -14,8 +14,6 @@ class RaceCar {
     var gas : Double
     var mileage : Double
     private var crashTime : Int
-    
-    
     init (carBroke: Bool,
          typeCar: typeCar,
          gas : Double,
@@ -28,7 +26,6 @@ class RaceCar {
         self.mileage = mileage
         self.crashTime = crashTime
     }
-    
     
     func refillGas (gasToReffill : Double) {
         if gas < 0 {
@@ -62,17 +59,12 @@ class RaceCar {
         if mileage == 500000 {
             carBroke = true
         }
-       
     }
-    
-    
-    
-    
+
     enum typeCar {
         case sedan
         case truck
         case hatchback
     }
-    
 }
 

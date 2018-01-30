@@ -20,17 +20,14 @@ class ViewController: UIViewController {
     let carName = RaceCar.init(carBroke: false, typeCar: .sedan, gas: 0, mileage: 0)
     override func viewDidLoad() {
         print("Please refill gas before the race! there are no gas in car!")
-        
-        GasRefillTextField.keyboardType = .decimalPad
+                GasRefillTextField.keyboardType = .decimalPad
         raceKmTextField.keyboardType = . decimalPad
-        
     }
     
     func setupData() {
         GasLabel.text = "\(carName.gas)"
         CarIsBroken.text = "\(carName.carBroke)"
         mileageLabel.text = "\(carName.mileage)"
-        
     }
     
     @IBAction func gasRefilButton(_ sender: UIButton) {
@@ -54,20 +51,11 @@ class ViewController: UIViewController {
                 carName.move(kilometers: kmDouble)
                 carName.mileagePast(kilometers: kmDouble)
                 setupData()
-                
             }
             else {
                 print("the text is not a number")
             }
         }
     }
-    
-
-    
-    
-    
-    
-    
-    
 }
 
